@@ -1,0 +1,83 @@
+providers:
+  atlantic:
+    api_public_key: ""
+    api_private_key: ""
+    type: "G2.1GB"
+    locations:
+      - USEAST1
+      - USCENTRAL1
+      - USWEST1
+      - CAEAST1
+      - EUWEST1
+
+  aws:
+    aws_access_key_id: ""
+    aws_secret_access_key: ""
+    type: "t2.nano"
+    locations:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - ca-central-1
+      - ap-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-southeast-1
+      - ap-southeast-2
+      - eu-central-1
+      - eu-west-1
+      - eu-west-2
+      - sa-east-1
+
+  digitalocean:
+    token: ""
+    type: "512mb"
+    locations:
+      - nyc1
+      - nyc3
+      - sfo1
+      - sfo2
+      - ams2
+      - ams3
+      - sgp1
+      - lon1
+      - fra1
+      - tor1
+      - blr1
+
+  google_compute:
+    service_account_email: ""
+    pem_file: "account.json"
+    project_id: ""
+    type: "f1-micro"
+    locations:
+      - us-central1
+      - us-east1
+      - us-east4
+      - us-west1
+      - europe-west1
+      - europe-west2
+      - asia-southeast1
+      - asia-northeast1
+      - asia-east1
+      - australia-southeast1
+
+  vultr:
+    api_key: ""
+    locations:
+      - atlanta
+      - chicago
+      - dallas
+      - los angeles
+      - miami
+      - new jersey
+      - seattle
+      - silicon valley
+      - singapore
+      - amsterdam
+      - tokyo
+      - london
+      - paris
+      - frankfurt
+      - sydney

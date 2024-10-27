@@ -1,0 +1,17 @@
+[Unit]
+Description=Ephemeral VPN Project
+After=network-online.target docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/core
+
+ExecStart=/usr/bin/tar zxvf vpn.tgz
+ExecStart=/home/core/init.sh firewall
+ExecStart=/home/core/init.sh wait
+ExecStart=/usr/bin/docker build -t vpn .
+ExecStart=/usr/bin/docker run --name vpn --restart=unless-stopped --device=/dev/net/tun --net host --cap-add NET_ADMIN -d vpn
+ExecStart=/usr/bin/systemctl disable vpn.service
+
+[Install]
+WantedBy=multi-user.target
